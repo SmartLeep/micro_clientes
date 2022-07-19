@@ -12,7 +12,9 @@ import { ClienteModule } from './cliente/cliente.module';
       envFilePath: ['.env.development'],
       isGlobal: true,
     }),
-    MongooseModule.forRoot(process.env.URI_MONGODB),
+    MongooseModule.forRoot(
+      'mongodb+srv://adminReservas:reservas2021@cluster0.ixfnpo4.mongodb.net/?retryWrites=true&w=majority',
+    ),
     ClienteModule,
   ],
   controllers: [AppController],
