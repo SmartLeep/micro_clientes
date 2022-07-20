@@ -13,7 +13,7 @@ import { ClienteModule } from './cliente/cliente.module';
       isGlobal: true,
     }),
     MongooseModule.forRoot(
-      'mongodb+srv://adminReservas:reservas2021@cluster0.ixfnpo4.mongodb.net/?retryWrites=true&w=majority',
+      'mongodb+srv://adminReservas:reservas2021@cluster0.ixfnpo4.mongodb.net/?retryWrites=true&w=majority'
     ),
     ClienteModule,
   ],
