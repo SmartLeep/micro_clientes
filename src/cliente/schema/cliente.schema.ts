@@ -1,7 +1,7 @@
 import * as moogoose from 'mongoose';
 export const ClienteSchema = new moogoose.Schema(
   {
-    Identificacion: { type: Number, required: true },
+    Identificacion: { type: String, required: true },
     Nombres: { type: String, required: true },
     Apellidos: { type: String, required: true },
     Direccion: { type: String, required: true },
@@ -11,4 +11,4 @@ export const ClienteSchema = new moogoose.Schema(
   },
   { timestamps: true },
 );
-ClienteSchema.index({ Email: 1 }, { unique: true });
+ClienteSchema.index({ username: 1 }, { unique: true });

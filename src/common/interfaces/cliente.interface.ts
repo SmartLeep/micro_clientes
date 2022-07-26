@@ -1,5 +1,5 @@
 export interface ICliente extends Document {
-  Identificacion: number;
+  Identificacion: string;
   Nombres: string;
   Apellidos: string;
   Direccion: string;

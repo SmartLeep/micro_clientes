@@ -1,9 +1,9 @@
-import { IsNotEmpty, IsNumber, IsString } from 'class-validator';
+import { IsNotEmpty, IsString } from 'class-validator';
 
 export class ClienteDTO {
   @IsNotEmpty()
-  @IsNumber()
-  readonly Identificacion: number;
+  @IsString()
+  readonly Identificacion: string;
   @IsNotEmpty()
   @IsString()
   readonly Nombres: string;
