@@ -22,7 +22,7 @@ export class AuthService {
       username: user.username,
       sub: user._id,
     };
-    return { access_token: this.jwtService.sign(payload) };
+    return { access_token: this.jwtService.sign(payload), user_id:user._id };
   }
   async signUp(clienteDTO: ClienteDTO) {
     return this.clienteService.create(clienteDTO);
