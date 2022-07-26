@@ -4,5 +4,6 @@ export interface ICliente extends Document {
   Apellidos: string;
   Direccion: string;
   Email: string;
-  Password: string;
+  username: string;
+  password: string;
 }

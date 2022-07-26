@@ -1,6 +1,5 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
-import { Mongoose } from 'mongoose';
 import { CLIENTE } from 'src/common/models/models';
 import { ClienteController } from './cliente.controller';
 import { ClienteService } from './cliente.service';
@@ -11,13 +10,12 @@ import { ClienteSchema } from './schema/cliente.schema';
     MongooseModule.forFeatureAsync([
       {
         name: CLIENTE.name,
-        useFactory: () => {
-          return ClienteSchema;
-        },
+        useFactory: () => ClienteSchema,
       },
     ]),
   ],
   controllers: [ClienteController],
   providers: [ClienteService],
+  exports: [ClienteService],
 })
 export class ClienteModule {}

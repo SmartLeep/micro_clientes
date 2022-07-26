@@ -6,7 +6,8 @@ export const ClienteSchema = new moogoose.Schema(
     Apellidos: { type: String, required: true },
     Direccion: { type: String, required: true },
     Email: { type: String, required: true },
-    Password: { type: String, required: true },
+    username: { type: String, required: true },
+    password: { type: String, required: true },
   },
   { timestamps: true },
 );

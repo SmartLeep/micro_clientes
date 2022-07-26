@@ -1,11 +1,4 @@
-import {
-  IsEmail,
-  IsNotEmpty,
-  IsNumber,
-  isNumber,
-  IsString,
-  isString,
-} from 'class-validator';
+import { IsNotEmpty, IsNumber, IsString } from 'class-validator';
 
 export class ClienteDTO {
   @IsNotEmpty()
@@ -21,9 +14,12 @@ export class ClienteDTO {
   @IsString()
   readonly Direccion: string;
   @IsNotEmpty()
-  @IsEmail()
+  @IsString()
   readonly Email: string;
   @IsNotEmpty()
   @IsString()
-  readonly Password: string;
+  readonly username: string;
+  @IsNotEmpty()
+  @IsString()
+  readonly password: string;
 }

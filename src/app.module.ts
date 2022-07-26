@@ -5,6 +5,7 @@ import { Mongoose } from 'mongoose';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ClienteModule } from './cliente/cliente.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -16,6 +17,7 @@ import { ClienteModule } from './cliente/cliente.module';
       'mongodb+srv://adminReservas:reservas2021@cluster0.ixfnpo4.mongodb.net/?retryWrites=true&w=majority'
     ),
     ClienteModule,
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],
